@@ -60,6 +60,7 @@ modules:
         # TUI
         - ncdu
         - iotop
+        - btop
         - neovim # Remove in favor of appimage?
         # GUI
         - alacritty
