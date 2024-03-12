@@ -1,4 +1,4 @@
-# Atomic Tiles (based on BlueBuild Template) &nbsp; [![build-ublue](https://github.com/iotku/atomic-tiles/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
+# Atomic Tiles (based on BlueBuild Template) &nbsp; [![build-ublue](https://github.com/iotku/atomic-tiles/actions/workflows/build.yml/badge.svg)](https://github.com/iotku/atomic-tiles/actions/workflows/build.yml)
 
 Howdy, you've stumbled across my customized BlueBuild image which I run on my
 various systems.
