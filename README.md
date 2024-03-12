@@ -1,19 +1,27 @@
-# Legacy template [![build-ublue](https://github.com/blue-build/legacy-template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/legacy-template/actions/workflows/build.yml)
+# Atomic Tiles (based on BlueBuild Template) &nbsp; [![build-ublue](https://github.com/iotku/atomic-tiles/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
-> **Warning**  
-> This repository was previously `ublue-os/startingpoint`, but has now been [moved to the BlueBuild organization](https://blue-build.org/blog/introducing-bluebuild/). New custom images should be created from the new [blue-build/template](https://github.com/blue-build/template), but this repository will be supported for the foreseeable future.  
-> Check out the [migration guide](https://blue-build.org/blog/introducing-bluebuild/#how-to-migrate) for migration instructions.
+Howdy, you've stumbled across my customized BlueBuild image which I run on my
+various systems.
+
+This image is focused towards developing a usable i3 or sway enviroment, but
+may include other tiling WMs in the future.
+
+This repo probably isn't very useful for you unless you want to run my base
+system.
+
+If you're interested in creating your own personal image:
+ See the [BlueBuild docs](https://blue-build.org/how-to/setup/)
 
 ## Installation
 
 > **Warning**  
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
 
-To rebase an existing Silverblue/Kinoite installation to the latest build:
+To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/blue-build/legacy-template:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/iotku/atomic-tiles:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -21,7 +29,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/blue-build/legacy-template:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/iotku/atomic-tiles:latest
   ```
 - Reboot again to complete the installation
   ```
@@ -32,18 +40,16 @@ The `latest` tag will automatically point to the latest build. That build will s
 
 ## ISO
 
-This template includes a simple Github Action to build and release an ISO of your image.
+> **Warning**  
+> The ISO GitHub Action will be deprecated soon in favor of the new [ublue-os/isogenerator](https://github.com/ublue-os/isogenerator). The Action will then be removed from this template repository and instructions for building ISOs will be on the website.
 
-To run the action, simply edit the `boot_menu.yml` by changing all the references to startingpoint to your repository. This should trigger the action automatically.
-
-The Action currently uses [ublue-os/isogenerator-old](https://github.com/ublue-os/isogenerator-old) and works in a similar manner to the official Universal Blue ISO. If you have any issues, you should first check [the documentation page on installation](https://universal-blue.org/installation/). The ISO is a netinstaller and should always pull the latest version of your image.
-
-Note that this release-iso action is not a replacement for a full-blown release automation like [release-please](https://github.com/googleapis/release-please).
+Currently, this repo does not generate ISOs.
 
 ## Verification
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
+cosign verify --key cosign.pub ghcr.io/iotku/atomic-tiles
 ```
+
