@@ -26,6 +26,7 @@ modules:
         - https://copr.fedorainfracloud.org/coprs/gloriouseggroll/nobara-39/repo/fedora-39/gloriouseggroll-nobara-39-fedora-39.repo
     install:
         - opentabletdriver
+        - android-file-transfer
         - fcitx5
         - fcitx5-autostart
         - fcitx5-gtk
