@@ -45,6 +45,7 @@ modules:
         - virt-install
         - virt-manager
         - virt-viewer
+        - mpc # MPD Control for i3
         - xrandr
         - xclip
         - xdotool
@@ -61,7 +62,7 @@ modules:
         - btop
         - neovim # Remove in favor of appimage?
         # GUI
-        - alacritty
+        - alacritty # Terminal
         #
       # - micro
       # - starship
@@ -90,6 +91,10 @@ modules:
       repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
+        - org.mozilla.firefox
+        - org.mozilla.Thunderbird
+        - org.telegram.desktop
+        - com.discordapp.Discord
       # - org.gnome.Loupe
       # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08).
