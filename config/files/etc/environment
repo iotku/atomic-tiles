@@ -1,0 +1,6 @@
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+GTK_THEME=Adwaita:dark
+QT_STYLE_OVERRIDE=Adwaita-Dark
+ADW_DISABLE_PORTAL=1
