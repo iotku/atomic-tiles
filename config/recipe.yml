@@ -22,6 +22,7 @@ modules:
       #  - https://copr.fedorainfracloud.org/coprs/gloriouseggroll/nobara-39/repo/fedora-39/gloriouseggroll-nobara-39-fedora-39.repo
     install:
         #- opentabletdriver % need new F40 repo...
+        - solaar # Logitech Mouse Control
         - android-file-transfer
         - fcitx5
         - fcitx5-autostart
@@ -39,7 +40,6 @@ modules:
         - pamixer # Volume Control for i3
         - picom
         - qemu-system-arm
-          #      - qt5ct # For QT Dark theme, can I get this working?
         - redshift-gtk
         - unclutter
         - virt-install
@@ -60,7 +60,6 @@ modules:
         - ncdu
         - iotop
         - btop
-        - neovim # Remove in favor of appimage?
         # GUI
         - alacritty # Terminal
         #
