@@ -37,14 +37,13 @@ modules:
         - i3
         - i3blocks
         - i3lock
-        - pamixer # Volume Control for i3
         - picom
-        - qemu-system-arm
         - redshift-gtk
         - unclutter
         - virt-install
         - virt-manager
         - virt-viewer
+        - qemu-system-arm
         - mpc # MPD Control for i3
         - xrandr
         - xclip
