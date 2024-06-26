@@ -9,6 +9,10 @@ image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 modules:
+  - type: akmods
+    base: main
+    install:
+      - v4l2loopback
   - type: files
     files:
       - usr: /usr # copies config/files/usr into your images /usr
