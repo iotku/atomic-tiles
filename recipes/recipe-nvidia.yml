@@ -13,10 +13,11 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/iotku/swaygit/repo/fedora-40/iotku-swaygit-fedora-40.repo
+    install:
+      - wlroots-0.19
     replace:
       - from-repo: https://copr.fedorainfracloud.org/coprs/iotku/swaygit/repo/fedora-40/iotku-swaygit-fedora-40.repo
         packages:
           - wayland
-          - wlroots
           - sway
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
