@@ -16,7 +16,7 @@ modules:
       - from-repo: https://copr.fedorainfracloud.org/coprs/iotku/swaygit/repo/fedora-40/iotku-swaygit-fedora-40.repo
         packages:
           - wayland
-          - wlroots-0.19
+          - wlroots
           - sway
   - from-file: image_configs/common.yml
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
