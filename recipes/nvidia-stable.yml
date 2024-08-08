@@ -6,7 +6,9 @@ description: i3wm/sway image
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/sericea-nvidia
 image-version: 40
-alt-tags: stable
+alt-tags:
+  - gts
+  - stable
 
 # module configuration, executed in order
   - from-file: image_configs/common.yml
