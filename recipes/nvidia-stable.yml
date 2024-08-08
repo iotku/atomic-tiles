@@ -1,0 +1,14 @@
+# image will be published to ghcr.io/<user>/<name>
+name: atomic-tiles-nvidia
+# description will be included in the image's metadata
+description: i3wm/sway image
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/sericea-nvidia
+image-version: 40
+alt-tags:
+  - stable
+
+# module configuration, executed in order
+  - from-file: image_configs/common.yml
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
