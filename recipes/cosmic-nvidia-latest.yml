@@ -5,7 +5,7 @@ description: cosmic testing image
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/cosmic-silverblue
-image-version: latest
+image-version: latest-amd64
 
 # module configuration, executed in order
 modules:
