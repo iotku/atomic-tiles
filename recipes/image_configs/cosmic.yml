@@ -1,0 +1,96 @@
+# module configuration, executed in order
+modules:
+  - type: akmods
+    base: main
+    install:
+      - v4l2loopback
+      - xpadneo
+      - xone
+  - type: rpm-ostree
+    repos:
+      #  - https://copr.fedorainfracloud.org/coprs/gloriouseggroll/nobara-39/repo/fedora-39/gloriouseggroll-nobara-39-fedora-39.repo
+    install:
+        #- opentabletdriver % need new F40 repo...
+        - solaar # Logitech Mouse Control
+        - android-file-transfer
+        - fcitx5
+        - fcitx5-autostart
+        - fcitx5-gtk
+        - fcitx5-lua
+        - fcitx5-mozc # Japanese IME Module
+        - fcitx5-qt
+        - terminus-fonts
+        - fontawesome-fonts
+        - virt-install
+        - virt-manager
+        - virt-viewer
+        - qemu-system-arm
+        - mpc # MPD Control
+        - zsh
+        # Remote File Access
+        - rclone # Can work as SMB client
+        - fuse-sshfs
+        - lftp
+        # TUI
+        - ncdu
+        - iotop
+        - btop
+        # GUI
+        - alacritty # Terminal
+        #
+    remove:
+      - firefox # default firefox removed in favor of flatpak
+      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      # We use fcitx input rather than ibus
+      - ibus
+      - ibus-setup
+      - ibus-libs
+      - ibus-typing-booster
+      - ibus-gtk3
+      - ibus-gtk4
+      - ibus-anthy-python
+      - ibus-anthy
+      - ibus-hangul
+      - ibus-libzhuyin
+      - ibus-libpinyin
+      - ibus-m17n
+
+  - type: default-flatpaks
+    notify: true   # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        - org.mozilla.firefox
+        - org.mozilla.Thunderbird
+        - org.telegram.desktop
+        - com.discordapp.Discord
+      # - org.gnome.Loupe
+      # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
+      # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08).
+      # Only normal flatpak applications are (like Floorp Lightning web browser in this example).
+      # Multiple install of same flatpaks with different branches is not supported.
+      remove:
+      # - org.gnome.eog
+      #
+    # A flatpak repo can also be added without having to install flatpaks,
+    # as long as one of the repo- fields is present
+    user:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+  - type: brew
+    nofile-limits: true # increase nofile limits
+    brew-analytics: false # disable telemetry
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - Hack
+        - JetBrainsMono
+        - SourceCodePro
+  - type: script
+    snippets:
+      - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
+    scripts:
+      #- myscript.sh # example: run config/scripts/myscript.sh
