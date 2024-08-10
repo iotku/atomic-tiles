@@ -41,20 +41,6 @@ modules:
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-      # We use fcitx input rather than ibus
-      - ibus
-      - ibus-setup
-      - ibus-libs
-      - ibus-typing-booster
-      - ibus-gtk3
-      - ibus-gtk4
-      - ibus-anthy-python
-      - ibus-anthy
-      - ibus-hangul
-      - ibus-libzhuyin
-      - ibus-libpinyin
-      - ibus-m17n
-
   - type: default-flatpaks
     notify: true   # Send notification after install/uninstall is finished (true/false)
     system:
