@@ -17,32 +17,13 @@ modules:
         #- opentabletdriver % need new F40 repo...
         - solaar # Logitech Mouse Control
         - android-file-transfer
-        - fcitx5
-        - fcitx5-autostart
-        - fcitx5-gtk
-        - fcitx5-lua
-        - fcitx5-mozc # Japanese IME Module
-        - fcitx5-qt
-        - feh
         - terminus-fonts
         - fontawesome-fonts
-        - gnome-settings-daemon # Perhaps there's a lighter xsettings daemon?
-        - i3
-        - i3blocks
-        - i3lock
-        - picom
-        - redshift-gtk
-        - unclutter
         - virt-install
         - virt-manager
         - virt-viewer
         - qemu-system-arm
         - mpc # MPD Control for i3
-        - xrandr
-        - xclip
-        - xdotool
-        - maim
-        - xset
         - zsh
         # Remote File Access
         - rclone # Can work as SMB client
@@ -54,9 +35,6 @@ modules:
         - btop
         # GUI
         - alacritty # Terminal
-        #
-      # - micro
-      # - starship
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems

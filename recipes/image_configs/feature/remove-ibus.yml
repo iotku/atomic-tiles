@@ -1,0 +1,20 @@
+# Removing stuff probably just masks it and doesn't reduce the size of the image
+# but if we prefer to use a different IME it's less tooling to be in the way.
+#
+# Cosmic depends on ibus and likely Gnome does as well.
+modules:
+  - type: rpm-ostree
+    remove:
+      # We use fcitx input rather than ibus
+      - ibus
+      - ibus-setup
+      - ibus-libs
+      - ibus-typing-booster
+      - ibus-gtk3
+      - ibus-gtk4
+      - ibus-anthy-python
+      - ibus-anthy
+      - ibus-hangul
+      - ibus-libzhuyin
+      - ibus-libpinyin
+      - ibus-m17n
