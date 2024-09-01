@@ -8,15 +8,15 @@ modules:
         - fcitx5-mozc # Japanese IME Module
         - fcitx5-qt
     remove:
-      - ibus
-      - ibus-setup
-      - ibus-libs
-      - ibus-typing-booster
-      - ibus-gtk3
-      - ibus-gtk4
-      - ibus-anthy-python
-      - ibus-anthy
-      - ibus-hangul
-      - ibus-libzhuyin
-      - ibus-libpinyin
-      - ibus-m17n
+        - ibus
+        - ibus-setup
+        - ibus-libs
+        - ibus-typing-booster
+        - ibus-gtk3
+        - ibus-gtk4
+        - ibus-anthy-python
+        - ibus-anthy
+        - ibus-hangul
+        - ibus-libzhuyin
+        - ibus-libpinyin
+        - ibus-m17n
