@@ -29,7 +29,7 @@ jobs:
           image_repo: ${{ env.IMAGE_REPO }}
           image_tag: ${{ matrix.image_tag }}
           version: ${{ matrix.major_version }}
-          variant: ${{ env.VARIANT }} # What is this?, just appends varient?
+          variant: "" # What is this?, just appends varient?
           iso_name: ${{ matrix.image_name }}-${{ matrix.image_tag }}-${{ matrix.major_version }}.iso
           enable_cache_dnf: "false"
           enable_cache_skopeo: "false"
