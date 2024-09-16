@@ -3,21 +3,37 @@ name: Build ISO
 on:
   workflow_dispatch: # allow manually triggering builds
 
+env:
+  IMAGE_REPO: ghcr.io/${{ github.repository_owner }}
+
 jobs:
   build-iso:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        image_name:
+          - atomic-tiles-main
+          - atomic-tiles-nvidia
+        major_version:
+          - 40
+        image_tag:
+          - latest
     steps:
       - name: Build ISO
         uses: jasonn3/build-container-installer@main
         id: build
         with:
           arch: ${{ env.ARCH }}
-          image_name: ${{ env.IMAGE_NAME }}
+          image_name: ${{ matrix.image_name }}
           image_repo: ${{ env.IMAGE_REPO }}
-          image_tag: ${{ env.IMAGE_TAG }}
-          version: ${{ env.VERSION }}
-          variant: ${{ env.VARIANT }}
-          iso_name: ${{ env.IMAGE_NAME }}-${{ env.IMAGE_TAG }}-${{ env.VERSION }}.iso
+          image_tag: ${{ matrix.image_tag }}
+          version: ${{ matrix.major_version }}
+          variant: ${{ env.VARIANT }} # What is this?, just appends varient?
+          iso_name: ${{ matrix.image_name }}-${{ matrix.image_tag }}-${{ matrix.major_version }}.iso
+          enable_cache_dnf: "false"
+          enable_cache_skopeo: "false"
+
 
       - name: Upload ISO as artifact
         id: upload
