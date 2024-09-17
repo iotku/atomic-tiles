@@ -15,6 +15,7 @@ modules:
       #  - https://copr.fedorainfracloud.org/coprs/gloriouseggroll/nobara-39/repo/fedora-39/gloriouseggroll-nobara-39-fedora-39.repo
     install:
         #- opentabletdriver % need new F40 repo...
+        - bootc  # Better than rpm-ostree since we shouldn't have to layer
         - solaar # Logitech Mouse Control
         - android-file-transfer
         - terminus-fonts
