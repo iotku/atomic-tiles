@@ -102,7 +102,6 @@ modules:
   - type: script
     snippets:
       - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
-      - "mkdir /usr/local/bin/overrides"
     scripts:
       #- myscript.sh # example: run config/scripts/myscript.sh
   - type: justfiles
