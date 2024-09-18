@@ -24,7 +24,9 @@ modules:
         - virt-manager
         - virt-viewer
         - qemu-system-arm
+        - qemu-system-riscv
         - mpc # MPD Control for i3
+        - mpv # Best video player
         - zsh
         # Remote File Access
         - rclone # Can work as SMB client
@@ -36,6 +38,13 @@ modules:
         - btop
         # GUI
         - alacritty # Terminal
+        - keepassxc
+        - zulucrypt
+        # Programming
+        - java-latest-openjdk
+        - rustup
+        - golang
+        - lua
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -49,9 +58,25 @@ modules:
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - org.mozilla.firefox
+        # Productivity
+        - org.libreoffice.LibreOffice
+        - com.logseq.Logseq
         - org.mozilla.Thunderbird
+        - com.sublimemerge.App
+        # Communication Platforms
         - org.telegram.desktop
         - com.discordapp.Discord
+        - us.zoom.Zoom
+        - info.mumble.Mumble
+        # Compatibility
+        - com.usebottles.bottles
+        - io.podman_desktop.PodmanDesktop
+        - it.mijorus.gearlever # GTK Manage Appimages
+        # Media
+        - com.calibre_ebook.calibre
+        - com.yacreader.YACReader
+        - com.obsproject.Studio
+        - org.gimp.GIMP
       # - org.gnome.Loupe
       # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08).
