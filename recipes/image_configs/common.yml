@@ -111,3 +111,4 @@ modules:
     system:
       enabled:
         - swtpm-workaround.service
+        - libvirt-workaround.service
