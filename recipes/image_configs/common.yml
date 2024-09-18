@@ -106,3 +106,8 @@ modules:
       #- myscript.sh # example: run config/scripts/myscript.sh
   - type: justfiles
     validate: true
+  - type: systemd
+    # this example disables automatic flatpak updates and enables a custom service unit for all users
+    system:
+      enabled:
+        - swtpm-workaround.service
