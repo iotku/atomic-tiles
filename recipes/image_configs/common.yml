@@ -64,7 +64,7 @@ modules:
         - com.logseq.Logseq
         - org.mozilla.Thunderbird
         - com.sublimemerge.App
-        = net.ankiweb.Anki
+        - net.ankiweb.Anki
         # Communication Platforms
         - org.telegram.desktop
         - com.discordapp.Discord
