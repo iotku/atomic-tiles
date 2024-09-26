@@ -22,6 +22,7 @@ modules:
         - maim
         - xset
         - zathura
+        - zathura-pdf-poppler
         # Power managemnet
         - tuned
         - tuned-gtk
