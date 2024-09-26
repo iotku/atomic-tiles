@@ -21,3 +21,4 @@ modules:
         - xdotool
         - maim
         - xset
+        - power-profiles-daemon # This will likely be replaced by TuneD in F41
