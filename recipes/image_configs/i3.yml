@@ -22,4 +22,7 @@ modules:
         - maim
         - xset
         - zathura
-        - power-profiles-daemon # This will likely be replaced by TuneD in F41
+        # Power managemnet
+        - tuned
+        - tuned-gtk
+        - tuned-ppd
