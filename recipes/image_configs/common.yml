@@ -33,6 +33,7 @@ modules:
         - fuse-sshfs
         - lftp
         # TUI
+        - nnn
         - ncdu
         - iotop
         - btop
