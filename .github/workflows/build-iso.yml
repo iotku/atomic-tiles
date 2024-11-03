@@ -16,7 +16,7 @@ jobs:
           - atomic-tiles-main
           - atomic-tiles-nvidia
         major_version:
-          - 40
+          - 41
         image_tag:
           - latest
     steps:
