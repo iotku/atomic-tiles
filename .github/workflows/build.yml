@@ -23,6 +23,7 @@ jobs:
         recipe:
           # !! Add your recipes here 
           - main.yml
+          - main-latest.yml
           - nvidia-stable.yml
           - cosmic-nvidia-latest.yml
           - nvidia-latest.yml
