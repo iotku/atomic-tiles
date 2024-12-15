@@ -25,7 +25,7 @@ jobs:
           - main.yml
           - main-latest.yml
           - nvidia-stable.yml
-          - cosmic-nvidia-latest.yml
+ #         - cosmic-nvidia-latest.yml
           - nvidia-latest.yml
     steps:
        # the build is fully handled by the reusable github action
