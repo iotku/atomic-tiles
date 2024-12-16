@@ -1,11 +1,5 @@
 # module configuration, executed in order
 modules:
-  - type: akmods
-    base: main
-    install:
-      - v4l2loopback
-      - xpadneo
-      - xone
   - type: files
     files:
       - source: system

@@ -10,6 +10,7 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 modules:
   - from-file: image_configs/swaygit.yml
+  - from-file: image_configs/akmods.yml
   - from-file: image_configs/common.yml
   - from-file: image_configs/i3.yml
   - from-file: image_configs/feature/add-fcitx.yml
