@@ -6,7 +6,6 @@ modules:
         destination: /
   - type: rpm-ostree
     install:
-        #- opentabletdriver % need new F40 repo...
         - bootc  # Better than rpm-ostree since we shouldn't have to layer
         - solaar # Logitech Mouse Control
         - android-file-transfer
@@ -39,6 +38,7 @@ modules:
         - golang
         - lua
         - gcc-c++ # C++
+        - zig
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
