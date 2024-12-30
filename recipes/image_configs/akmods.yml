@@ -3,6 +3,6 @@ modules:
     base: main
     install:
       - v4l2loopback
-      - xpadneo
-      - xone
+ #     - xpadneo
+ #     - xone
 
