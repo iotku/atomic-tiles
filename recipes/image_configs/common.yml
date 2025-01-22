@@ -5,6 +5,10 @@ modules:
       - source: system
         destination: /
   - type: rpm-ostree
+    repos:
+      - https://download.docker.com/linux/fedora/docker-ce.repo
+    keys:
+      - https://download.docker.com/linux/fedora/gpg
     install:
         - bootc  # Better than rpm-ostree since we shouldn't have to layer
         - solaar # Logitech Mouse Control
@@ -39,6 +43,12 @@ modules:
         - lua
         - gcc-c++ # C++
         - zig
+        # docker
+        - docker-ce
+        - docker-ce-cli
+        - docker-compose-plugin
+        - docker-buildx-plugin
+        - containerd.io
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
