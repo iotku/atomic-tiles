@@ -26,6 +26,7 @@ jobs:
           - cosmic-latest.yml
           - nvidia-stable.yml
           - nvidia-latest.yml
+          - nvidia-latest-noakmods.yml
           - cosmic-nvidia-latest.yml
     steps:
       - name: Build Custom Image
