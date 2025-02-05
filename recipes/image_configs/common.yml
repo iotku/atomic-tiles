@@ -25,6 +25,7 @@ modules:
         - mpc # MPD Control for i3
         - mpv # Best video player
         - zsh
+        - git-lfs
         # Remote File Access
         - rclone # Can work as SMB client
         - fuse-sshfs
