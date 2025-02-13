@@ -35,6 +35,7 @@ modules:
         - ncdu
         - iotop
         - btop
+        - tmux
         # GUI
         - alacritty # Terminal
         - keepassxc
