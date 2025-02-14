@@ -54,6 +54,14 @@ modules:
         - docker-compose-plugin
         - docker-buildx-plugin
         - containerd.io
+        # X11/Wayland development headers
+        - libX11-devel
+        - libXcursor-devel
+        - libxkbcommon-x11-devel
+        - mesa-libEGL-devel
+        - mesa-libGLES-devel
+        - vulkan-headers
+        - wayland-devel
         # TK
         - tk
         - python3-tkinter
