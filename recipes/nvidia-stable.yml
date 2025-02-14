@@ -12,7 +12,6 @@ alt-tags:
 
 modules:
   - from-file: image_configs/common.yml
-  - from-file: image_configs/akmods.yml
   - from-file: image_configs/i3.yml
   - from-file: image_configs/feature/add-fcitx.yml
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
