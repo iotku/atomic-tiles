@@ -23,12 +23,12 @@ jobs:
         recipe:
           - main.yml
           - main-latest.yml
-          - cosmic-latest.yml
+       #   - cosmic-latest.yml
           - nvidia-stable.yml
           - nvidia-latest.yml
           - nvidia-latest-noakmods.yml
-          - wayblue-hyprland-nvidia.yml
-          - cosmic-nvidia-latest.yml
+     #     - wayblue-hyprland-nvidia.yml
+      #    - cosmic-nvidia-latest.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
