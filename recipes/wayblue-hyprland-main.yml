@@ -1,0 +1,14 @@
+# image will be published to ghcr.io/<user>/<name>
+name: wayblue-hyprland-main
+# description will be included in the image's metadata
+description: hyprland image from wayblue
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/wayblueorg/hyprland
+image-version: 41 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+modules:
+  - from-file: image_configs/common.yml
+  - from-file: image_configs/feature/add-fcitx.yml
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
