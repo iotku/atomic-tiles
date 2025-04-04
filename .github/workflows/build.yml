@@ -27,7 +27,8 @@ jobs:
           - nvidia-stable.yml
           - nvidia-latest.yml
           - nvidia-latest-noakmods.yml
-     #     - wayblue-hyprland-nvidia.yml
+          - wayblue-hyprland-nvidia.yml
+          - wayblue-hyprland-main.yml
       #    - cosmic-nvidia-latest.yml
     steps:
       - name: Build Custom Image
