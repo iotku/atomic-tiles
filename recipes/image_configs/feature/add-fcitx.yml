@@ -1,6 +1,7 @@
 modules:
-  - type: rpm-ostree
+  - type: dnf
     install:
+      packages:
         - fcitx5
         - fcitx5-autostart
         - fcitx5-gtk

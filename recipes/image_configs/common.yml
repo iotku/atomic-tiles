@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # module configuration, executed in order
 modules:
   - type: files
@@ -6,13 +7,16 @@ modules:
         destination: /
   - type: dnf
     repos:
-      - https://download.docker.com/linux/fedora/docker-ce.repo
-      - https://packages.microsoft.com/yumrepos/vscode/config.repo
-    keys:
-      - https://download.docker.com/linux/fedora/gpg # for docker
-      - https://packages.microsoft.com/keys/microsoft.asc # for vscode
+      files:
+        - https://download.docker.com/linux/fedora/docker-ce.repo
+        - https://packages.microsoft.com/yumrepos/vscode/config.repo
+      keys:
+        - https://download.docker.com/linux/fedora/gpg # for docker
+        - https://packages.microsoft.com/keys/microsoft.asc # for vscode
     install:
-        - bootc  # Better than rpm-ostree since we shouldn't have to layer
+      skip-unavailable: true # skip unavailable packages
+      packages:
+        - bootc # Better than rpm-ostree since we shouldn't have to layer
         - solaar # Logitech Mouse Control
         - android-file-transfer
         - terminus-fonts
@@ -58,11 +62,12 @@ modules:
         - tk
         - python3-tkinter
     remove:
-      - firefox # default firefox removed in favor of flatpak
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      packages:
+        - firefox # default firefox removed in favor of flatpak
+        - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: default-flatpaks
-    notify: true   # Send notification after install/uninstall is finished (true/false)
+    notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
