@@ -34,7 +34,7 @@ modules:
         - rclone # Can work as SMB client
         - fuse-sshfs
         - lftp
-	- wireguard-tools
+        - wireguard-tools
         # TUI
         - nnn
         - ncdu
