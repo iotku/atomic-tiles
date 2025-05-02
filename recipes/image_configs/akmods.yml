@@ -1,8 +1,0 @@
-modules:
-  - type: akmods
-    base: main
-    install:
-      - v4l2loopback
- #     - xpadneo
- #     - xone
-
