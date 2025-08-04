@@ -68,6 +68,7 @@ modules:
         - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: default-flatpaks@v2
+  configurations:
     notify: false # Send notification after install/uninstall is finished (true/false)
     scope: system
     repo: # Flathub will be used by default if repo not defined, but leaving this hear for refrence
