@@ -21,7 +21,6 @@ jobs:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
-          - main.yml
           - main-latest.yml
        #   - cosmic-latest.yml
           - nvidia-stable.yml
