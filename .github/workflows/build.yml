@@ -23,9 +23,6 @@ jobs:
         recipe:
           - main-latest.yml
        #   - cosmic-latest.yml
-          - nvidia-stable.yml
-          - nvidia-latest.yml
-          - nvidia-latest-noakmods.yml
           - wayblue-hyprland-nvidia.yml
           - wayblue-hyprland-main.yml
       #    - cosmic-nvidia-latest.yml
